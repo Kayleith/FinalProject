@@ -1,11 +1,84 @@
-<h1>Sign In</h1>
-<form action="/session" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Email<br>
-    <input name="user[name]" type="text"><br>
-  </label><br>
-  <label>Password<br>
-    <input name="user[password]" type="password"><br>
-  </label><br>
-  <input type="submit" value="Submit" class="btn btn-primary"><br>
-</form>
+<header class="sign-in">
+  <nav class="sign-in-nav group">
+    <h1 class="sign-in-nav-logo">
+      <a href=#>
+        shutterstep
+      </a>
+    </h1>
+    <ul class="sign-in-ul group">
+      <form action="/session" method="post">
+        <li class="sign-in-text">
+          <label>Email or Username</label>
+          <br>
+            <input class="sign-in-form" name="user[name]" type="text">
+          <br>
+        </li>
+        <li class="sign-in-text">
+          <label>Password</label>
+          <br>
+            <input class="sign-in-form" name="user[password]" type="password"><br>
+          <br>
+        </li>
+        <li>
+          <input type="submit" value="Log In" class="sign-in-btn"><br>
+        </li>
+      </form>
+    </ul>
+  </nav>
+</header>
+<section class="sign-in-background">
+  <section class="sign-in-content group">
+    <article class="sign-in-message">
+
+    </article>
+    <article class="sign-up-form">
+      <h1>Sign Up</h1>
+      <h2>A picture is worth a thousand words</h2>
+      <form action="/users" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input class="name1" name="user[first_name]" type="text" placeholder="First Name">
+        <input class="name2" name="user[last_name]" type="text" placeholder="Last Name">
+        <br>
+        <input name="user[username]" type="text" placeholder="Username">
+        <br>
+        <input name="user[email]" type="text" placeholder="Email">
+        <br>
+        <input name="user[password]" type="password" placeholder="Password">
+        <br>
+        <label>Birthday</label>
+        <br>
+        <%= render partial: 'birthday' %>
+        <br>
+        <button>Sign Up</button>
+      </form>
+    </article>
+  </section>
+</section>
+
+<footer class="foot group">
+  <h2 class="foot-copyright">
+    Shutter Step © 2015. All rights reserved.
+  </h2>
+  <ul class="foot-links">
+    <li>
+      <a href="#">
+        Home
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Terms
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Privacy
+      </a>
+    </li>
+  </ul>
+</footer>
