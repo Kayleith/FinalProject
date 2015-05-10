@@ -16,10 +16,13 @@
 //= require backbone
 //= require bootstrap
 // require shutter_step
-// = require_tree ../templates
 // require_tree ./utils
-// = require_tree ./models
-// = require_tree ./collections
-// = require_tree ./views
-// = require_tree ./routers
-// = require_tree .
+//= require_tree .
+//= require underscore
+//= require backbone
+//= require shutter_step
+//= require_tree ../templates
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
