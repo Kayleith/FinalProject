@@ -87,7 +87,7 @@
   margin-bottom: 25px;
 }
 
-.sign-up-form input {
+.sign-up-form input.fields {
   background: white;
   border: 1px solid #BDC8D9;
   border-radius: 5px;
@@ -97,15 +97,50 @@
 }
 
 .sign-up-form input.name1 {
+  background: white;
+  border: 1px solid #BDC8D9;
+  border-radius: 5px;
   width: 192px;
+  height: 39px;
+  margin-bottom: 10px;
   margin-right: 8px;
 }
+
 .sign-up-form input.name2 {
+  background: white;
+  border: 1px solid #BDC8D9;
+  border-radius: 5px;
   width: 192px;
+  height: 39px;
+  margin-bottom: 10px;
+}
+
+.sing-up-form label {
+  font-size: 18px;
+}
+
+.dob {
+  width: 300px;
+  height: 41px;
 }
 
 .sign-up-form select {
+  margin-top: 5px;
+  float: left;
   background: transparent;
+  height: 32px;
+  font-size: 12px;
+  border: 1px solid #bdc7d8;
+}
+
+.sex-buttons {
+  height: 20px;
+}
+
+.sex-button {
+  float: left;
+  margin: 5px 10px;
+  font-size: 12px;
 }
 
 .sign-up-form button {

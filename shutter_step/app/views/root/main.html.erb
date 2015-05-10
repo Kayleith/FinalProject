@@ -39,15 +39,24 @@
         <input class="name1" name="user[first_name]" type="text" placeholder="  First Name">
         <input class="name2" name="user[last_name]" type="text" placeholder="  Last Name">
         <br>
-        <input name="user[username]" type="text" placeholder="  Username">
+        <input class="fields" name="user[username]" type="text" placeholder="  Username">
         <br>
-        <input name="user[email]" type="text" placeholder="  Email">
+        <input class="fields" name="user[email]" type="text" placeholder="  Email">
         <br>
-        <input name="user[password]" type="password" placeholder="  New Password">
+        <input class="fields" name="user[password]" type="password" placeholder="  New Password">
         <br>
         <label>Birthday</label>
         <br>
-        <%= render partial: 'birthday' %>
+        <%= render partial: '/partials/birthday' %>
+        <br>
+        <section class="sex-buttons">
+          <section class="sex-button">
+            <input type="radio" name="user[sex]" value="Female" checked> &nbsp;Female
+          </section>
+          <section class="sex-button">
+            <input type="radio" name="user[sex]" value="Male" checked> &nbsp;Male
+          </section>
+        </section>
         <br>
         <button>Sign Up</button>
       </form>
