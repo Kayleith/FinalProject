@@ -88,29 +88,32 @@
 }
 
 .sign-up-form input.fields {
+  padding-left: 10px;
   background: white;
   border: 1px solid #BDC8D9;
   border-radius: 5px;
-  width: 397px;
+  width: 387px;
   height: 39px;
   margin-bottom: 10px;
 }
 
 .sign-up-form input.name1 {
+  padding-left: 10px;
   background: white;
   border: 1px solid #BDC8D9;
   border-radius: 5px;
-  width: 192px;
+  width: 182px;
   height: 39px;
   margin-bottom: 10px;
   margin-right: 8px;
 }
 
 .sign-up-form input.name2 {
+  padding-left: 10px;
   background: white;
   border: 1px solid #BDC8D9;
   border-radius: 5px;
-  width: 192px;
+  width: 182px;
   height: 39px;
   margin-bottom: 10px;
 }
@@ -139,7 +142,7 @@
 
 .sex-button {
   float: left;
-  margin: 5px 10px;
+  margin: 0px 10px;
   font-size: 12px;
 }
 

@@ -9,19 +9,18 @@ class User < ActiveRecord::Base
   validates :session_token, :username, :email, uniqueness: true
 
   def self.find_by_credentials(name, password)
-    if(self.exists?(username: name))
+    if(User.exists?(username: name))
       user = User.find_by(username: name)
-    elsif(self.exists?(email: name))
+    elsif(User.exists?(email: name))
       user = User.find_by(email: name)
     end
-
     user.try(:is_password?, password) ? user : nil
   end
 
   def self.generate_session_token
     loop do
       random_token = SecureRandom::urlsafe_base64(16)
-      return random_token unless self.exists?(session_token: random_token)
+      return random_token unless User.exists?(session_token: random_token)
     end
   end
 

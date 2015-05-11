@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150506220049) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name",      null: false
     t.string   "last_name",       null: false
@@ -26,10 +29,10 @@ ActiveRecord::Schema.define(version: 20150506220049) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["first_name"], name: "index_users_on_first_name"
-  add_index "users", ["last_name"], name: "index_users_on_last_name"
-  add_index "users", ["session_token"], name: "index_users_on_session_token", unique: true
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["first_name"], name: "index_users_on_first_name", using: :btree
+  add_index "users", ["last_name"], name: "index_users_on_last_name", using: :btree
+  add_index "users", ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end

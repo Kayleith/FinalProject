@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    date = Date.new(params["DOBYear"], params["DOBMonth"], params["DOBDay"])
+    date = Date.new(params["DOBYear"].to_i, params["DOBMonth"].to_i, params["DOBDay"].to_i)
     @user = User.new(user_params.merge({birthday: date}))
 
     if @user.save
